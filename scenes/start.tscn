@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bu2aeluchgl3r"]
+[gd_scene load_steps=3 format=3 uid="uid://bu2aeluchgl3r"]
 
 [ext_resource type="Script" path="res://scenes/start.gd" id="1_1rsn4"]
+[ext_resource type="Theme" uid="uid://bcsck8gljqbnw" path="res://assets/style/buttonAnswer.tres" id="2_xglnq"]
 
 [node name="start" type="Control"]
 layout_mode = 3
@@ -27,10 +28,12 @@ alignment = 1
 
 [node name="play" type="Button" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
+theme = ExtResource("2_xglnq")
 text = "Jouer"
 
 [node name="quit" type="Button" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
+theme = ExtResource("2_xglnq")
 text = "Quitter"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer2/play" to="." method="_on_play_pressed"]
