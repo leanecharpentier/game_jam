@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0d18j1mwrlii"]
+
+[ext_resource type="Script" path="res://scenes/home.gd" id="1_70trm"]
+[ext_resource type="Texture2D" uid="uid://g24ep3u4pmq2" path="res://assets/visuels/carte.jpg" id="1_74m7y"]
+[ext_resource type="Theme" uid="uid://bcsck8gljqbnw" path="res://assets/style/buttonAnswer.tres" id="3_pwyl2"]
+
+[node name="home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_70trm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-22, -57)
+scale = Vector2(1.3398, 1.3398)
+texture = ExtResource("1_74m7y")
+centered = false
+
+[node name="france" type="Button" parent="."]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 503.0
+offset_right = 964.0
+offset_bottom = 534.0
+theme = ExtResource("3_pwyl2")
+text = "France
+"
+
+[node name="usa" type="Button" parent="."]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 505.0
+offset_right = 457.0
+offset_bottom = 536.0
+theme = ExtResource("3_pwyl2")
+text = "Etats-Unis
+"
+
+[node name="russie" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1387.0
+offset_top = 414.0
+offset_right = 1474.0
+offset_bottom = 445.0
+theme = ExtResource("3_pwyl2")
+text = "Russie
+"
+
+[node name="chine" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1442.0
+offset_top = 618.0
+offset_right = 1529.0
+offset_bottom = 649.0
+theme = ExtResource("3_pwyl2")
+text = "Chine"
+
+[node name="egypte" type="Button" parent="."]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 621.0
+offset_right = 1027.0
+offset_bottom = 652.0
+theme = ExtResource("3_pwyl2")
+text = "Egypte"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 42.0
+offset_right = 112.0
+offset_bottom = 73.0
+theme = ExtResource("3_pwyl2")
+text = "Quitter"
+
+[connection signal="pressed" from="france" to="." method="_on_france_pressed"]
+[connection signal="pressed" from="usa" to="." method="_on_usa_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

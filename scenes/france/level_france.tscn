@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://34mpq0oxl5i"]
+[gd_scene load_steps=3 format=3 uid="uid://34mpq0oxl5i"]
 
 [ext_resource type="Script" path="res://scenes/france/level_france.gd" id="1_xqk06"]
+[ext_resource type="Theme" uid="uid://bcsck8gljqbnw" path="res://assets/style/buttonAnswer.tres" id="2_14jt2"]
 
 [node name="levelFrance" type="Control"]
 layout_mode = 3
@@ -24,6 +25,7 @@ offset_right = 32.5
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_14jt2")
 text = "Gagner"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
