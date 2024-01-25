@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://d0d18j1mwrlii"]
+[gd_scene load_steps=14 format=3 uid="uid://d0d18j1mwrlii"]
 
 [ext_resource type="Script" path="res://scenes/home.gd" id="1_70trm"]
 [ext_resource type="Texture2D" uid="uid://bhnjm2debj872" path="res://assets/visuels/carte.png" id="2_12ijm"]
+[ext_resource type="AudioStream" uid="uid://dncr5yqf22ok7" path="res://assets/sound/farfadet.wav" id="2_gtht1"]
 [ext_resource type="FontFile" uid="uid://b4mplch8yuwbw" path="res://assets/visuels/font/retro.ttf" id="3_otqco"]
 [ext_resource type="Theme" uid="uid://bjd8kqse8028u" path="res://assets/style/labelPays.tres" id="3_pjiva"]
 [ext_resource type="Theme" uid="uid://dpkfqmfoxcl3w" path="res://assets/style/numberButton.tres" id="5_4e8p0"]
 [ext_resource type="Texture2D" uid="uid://dgpoacekc3uu" path="res://assets/visuels/lock.png" id="5_ojqjk"]
 [ext_resource type="Theme" uid="uid://baddwpgxvm816" path="res://assets/style/buttonSettings.tres" id="6_r1dgb"]
 [ext_resource type="PackedScene" uid="uid://cgb14xmwi3jv3" path="res://scenes/regles.tscn" id="8_yvsoc"]
-[ext_resource type="Texture2D" uid="uid://c3c174cbyvasa" path="res://assets/visuels/close.png" id="9_dgq6w"]
+[ext_resource type="Texture2D" uid="uid://dxek46wdphkgh" path="res://assets/visuels/close.png" id="9_dgq6w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tbtri"]
 font = ExtResource("3_otqco")
@@ -28,6 +29,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_70trm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_gtht1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

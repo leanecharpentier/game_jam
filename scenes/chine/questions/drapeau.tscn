@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjnra8dit4yt7"]
+[gd_scene load_steps=14 format=3 uid="uid://cjnra8dit4yt7"]
 
 [ext_resource type="Script" path="res://scenes/chine/questions/drapeau.gd" id="1_lhv33"]
 [ext_resource type="FontFile" uid="uid://b4mplch8yuwbw" path="res://assets/visuels/font/retro.ttf" id="2_eug32"]
@@ -8,10 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://bomedbv2xmvf3" path="res://assets/visuels/drag/chine.png" id="6_xcppt"]
 [ext_resource type="Texture2D" uid="uid://bcrm5o3depeji" path="res://assets/visuels/drag/turquie.png" id="7_xcxo7"]
 [ext_resource type="Theme" uid="uid://baddwpgxvm816" path="res://assets/style/buttonSettings.tres" id="8_ynkt2"]
+[ext_resource type="AudioStream" uid="uid://b8c3fybw50a2x" path="res://assets/sound/looseSound.wav" id="9_ikpyr"]
+[ext_resource type="AudioStream" uid="uid://oevq42t28t5f" path="res://assets/sound/winSound.wav" id="10_c8hch"]
+[ext_resource type="AudioStream" uid="uid://r3a0aiqbeirj" path="res://assets/sound/questions.wav" id="11_u0esu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ctcmf"]
 font = ExtResource("2_eug32")
 font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_a2vk7"]
+font_size = 80
 
 [node name="question2" type="Control"]
 layout_mode = 3
@@ -89,8 +95,47 @@ grow_vertical = 2
 theme = ExtResource("8_ynkt2")
 text = "Retour"
 
+[node name="bravo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.75
+anchor_right = 0.7
+anchor_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+text = "Bravo !"
+label_settings = SubResource("LabelSettings_a2vk7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="perdu" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.75
+anchor_right = 0.7
+anchor_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+text = "Perdu..."
+label_settings = SubResource("LabelSettings_a2vk7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="looseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ikpyr")
+
+[node name="winSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_c8hch")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_u0esu")
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/tunisie" to="." method="_on_tunisie_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/singapour" to="." method="_on_singapour_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/chine" to="." method="_on_chine_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/turquie" to="." method="_on_turquie_pressed"]
 [connection signal="pressed" from="retour" to="." method="_on_retour_pressed"]
+[connection signal="finished" from="looseSound" to="." method="_on_loose_sound_finished"]
+[connection signal="finished" from="winSound" to="." method="_on_win_sound_finished"]
