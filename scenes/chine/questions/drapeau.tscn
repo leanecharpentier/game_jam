@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjnra8dit4yt7"]
+
+[ext_resource type="Script" path="res://scenes/chine/questions/drapeau.gd" id="1_lhv33"]
+[ext_resource type="FontFile" uid="uid://b4mplch8yuwbw" path="res://assets/visuels/font/retro.ttf" id="2_eug32"]
+[ext_resource type="Theme" uid="uid://bnmaa78tph0x" path="res://assets/style/dragButton.tres" id="3_86cyl"]
+[ext_resource type="Texture2D" uid="uid://5l60aisw8ad1" path="res://assets/visuels/drag/tunisie.png" id="4_ja2m3"]
+[ext_resource type="Texture2D" uid="uid://cvumw7mlymdiu" path="res://assets/visuels/drag/singapour.png" id="5_2puoi"]
+[ext_resource type="Texture2D" uid="uid://bomedbv2xmvf3" path="res://assets/visuels/drag/chine.png" id="6_xcppt"]
+[ext_resource type="Texture2D" uid="uid://bcrm5o3depeji" path="res://assets/visuels/drag/turquie.png" id="7_xcxo7"]
+[ext_resource type="Theme" uid="uid://baddwpgxvm816" path="res://assets/style/buttonSettings.tres" id="8_ynkt2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ctcmf"]
+font = ExtResource("2_eug32")
+font_size = 35
+
+[node name="question2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhv33")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.486275, 0.768627, 0.682353, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quel est le drapeau de la Chine ?"
+label_settings = SubResource("LabelSettings_ctcmf")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="tunisie" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_86cyl")
+icon = ExtResource("4_ja2m3")
+
+[node name="singapour" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_86cyl")
+icon = ExtResource("5_2puoi")
+
+[node name="chine" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_86cyl")
+icon = ExtResource("6_xcppt")
+
+[node name="turquie" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_86cyl")
+icon = ExtResource("7_xcxo7")
+
+[node name="retour" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.1
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_ynkt2")
+text = "Retour"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/tunisie" to="." method="_on_tunisie_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/singapour" to="." method="_on_singapour_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/chine" to="." method="_on_chine_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/turquie" to="." method="_on_turquie_pressed"]
+[connection signal="pressed" from="retour" to="." method="_on_retour_pressed"]

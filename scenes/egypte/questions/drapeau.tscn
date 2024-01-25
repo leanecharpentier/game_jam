@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://cg17nqssdx671"]
+
+[ext_resource type="Script" path="res://scenes/egypte/questions/drapeau.gd" id="1_k11m6"]
+[ext_resource type="FontFile" uid="uid://b4mplch8yuwbw" path="res://assets/visuels/font/retro.ttf" id="2_3w7m7"]
+[ext_resource type="Theme" uid="uid://bnmaa78tph0x" path="res://assets/style/dragButton.tres" id="3_5vr8w"]
+[ext_resource type="Texture2D" uid="uid://dghhqmk6rjtv1" path="res://assets/visuels/drag/koweit.png" id="4_idubt"]
+[ext_resource type="Texture2D" uid="uid://cpvk2cwse65pe" path="res://assets/visuels/drag/yemen.png" id="5_llhlc"]
+[ext_resource type="Texture2D" uid="uid://65c0r1oep50y" path="res://assets/visuels/drag/emirats.png" id="6_xq81r"]
+[ext_resource type="Texture2D" uid="uid://dmraj01gx60ie" path="res://assets/visuels/drag/egypte.png" id="7_fxc7r"]
+[ext_resource type="Theme" uid="uid://baddwpgxvm816" path="res://assets/style/buttonSettings.tres" id="8_smxn1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ctcmf"]
+font = ExtResource("2_3w7m7")
+font_size = 35
+
+[node name="question2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k11m6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.486275, 0.768627, 0.682353, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quel est le drapeau de l'Egypte ?"
+label_settings = SubResource("LabelSettings_ctcmf")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="koweit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_5vr8w")
+icon = ExtResource("4_idubt")
+
+[node name="yemen" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_5vr8w")
+icon = ExtResource("5_llhlc")
+
+[node name="emirats" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_5vr8w")
+icon = ExtResource("6_xq81r")
+
+[node name="egypte" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_5vr8w")
+icon = ExtResource("7_fxc7r")
+
+[node name="retour" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.1
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_smxn1")
+text = "Retour"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/koweit" to="." method="_on_koweit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/yemen" to="." method="_on_yemen_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/emirats" to="." method="_on_emirats_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/egypte" to="." method="_on_egypte_pressed"]
+[connection signal="pressed" from="retour" to="." method="_on_retour_pressed"]

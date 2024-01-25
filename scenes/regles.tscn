@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgb14xmwi3jv3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4djhn"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_qjdm1"]
+font_size = 26
+
+[node name="regles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.803922)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="titre" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Les regles du jeu :"
+label_settings = SubResource("LabelSettings_4djhn")
+horizontal_alignment = 1
+
+[node name="regle1" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Polo a trouvé une carte au trésor ! Pars à l'aventure avec lui et parcours le monde à la recherche de ce trésor !"
+label_settings = SubResource("LabelSettings_qjdm1")
+autowrap_mode = 3
+
+[node name="regle2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Pendant ton périple, tu devras aller de pays en pays. Dans chaque pays, on te posera une question de culture générale qui pourra te faire un gagner un bonus pour le parcours qui va suivre ! A toi d'éviter les obstacles pour passer au niveau suivant..."
+label_settings = SubResource("LabelSettings_qjdm1")
+autowrap_mode = 3
+
+[node name="titre2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Comment jouer ?"
+label_settings = SubResource("LabelSettings_4djhn")
+horizontal_alignment = 1
+
+[node name="regle3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Appuie sur la touche Espace pour sauter et sur la flêche du bas pour t'accroupir"
+label_settings = SubResource("LabelSettings_qjdm1")
+autowrap_mode = 3
+
+[node name="titre3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Infos sur le trésor..."
+label_settings = SubResource("LabelSettings_4djhn")
+horizontal_alignment = 1
+
+[node name="regle4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Le trésor est une \"Gemme de Téléportation\" ! Tu te demandes ce que c'est ? Cette gemme te permettras de te téléporter sur une autre planète afin de partir à sa découverte..."
+label_settings = SubResource("LabelSettings_qjdm1")
+autowrap_mode = 3

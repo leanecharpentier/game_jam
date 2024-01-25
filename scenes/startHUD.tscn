@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu2aeluchgl3r"]
+
+[ext_resource type="Script" path="res://scenes/startHUD.gd" id="1_1gu5y"]
+[ext_resource type="Texture2D" uid="uid://ds5pnc8c37ttd" path="res://assets/visuels/logo.png" id="2_we8ac"]
+[ext_resource type="Theme" uid="uid://dewxc0e2pfkf8" path="res://assets/style/buttonStart.tres" id="3_jdnab"]
+
+[node name="start" type="CanvasLayer"]
+script = ExtResource("1_1gu5y")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.5
+offset_top = -333.5
+offset_right = 226.5
+offset_bottom = 125.5
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_we8ac")
+flat = true
+icon_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.65
+anchor_right = 0.65
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="play" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_jdnab")
+text = "Jouer"
+
+[node name="quit" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_jdnab")
+text = "Quitter"
+
+[connection signal="pressed" from="VBoxContainer2/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer2/quit" to="." method="_on_quit_pressed"]
