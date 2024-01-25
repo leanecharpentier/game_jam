@@ -1,13 +1,13 @@
 extends Node
 
 #preload obstacles
-var stump_scene = preload("res://scenes/usa/bird.tscn")
+var stump_scene = preload("res://scenes/usa/stump.tscn")
 var rock_scene = preload("res://scenes/usa/rock.tscn")
 var barrel_scene = preload("res://scenes/usa/barrel.tscn")
 var bird_scene = preload("res://scenes/usa/bird.tscn")
 var obstacles_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
-var bird_heights := [235]
+var bird_heights := [765]
 
 #game variables
 const DINO_START_POS := Vector2i(150, 485)
@@ -20,7 +20,7 @@ var high_score : int
 var speed : float
 const START_SPEED : float = 15.0
 const SPEED_MODIFIER : int = 3000
-const MAX_SPEED : int = 30
+const MAX_SPEED : int = 25
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
@@ -68,7 +68,6 @@ func _process(delta):
 		speed = START_SPEED + score / SPEED_MODIFIER
 		if speed > MAX_SPEED:
 			speed = MAX_SPEED
-		print(speed)
 		adjust_difficulty()
 			
 		#generate obstacles
@@ -100,7 +99,7 @@ func _process(delta):
 
 func generate_obs():
 #generate ground obstacles
-	if obstacles.is_empty() or (last_obs and last_obs.position.x < score + randi_range(300, 400)):
+	if obstacles.is_empty() or (last_obs and last_obs.position.x < score + randi_range(300, 500)):
 		var obs_type = obstacles_types[randi() % obstacles_types.size()]
 		var obs
 		var max_obs = difficulty + 1
@@ -121,7 +120,7 @@ func generate_obs():
 
 		#random birds spawn
 		if difficulty == MAX_DIFFICULTY:
-			if (randi() % 2) == 0:
+			if (randi() % 3) == 0:
 				#generate birds obstacles
 				obs = bird_scene.instantiate()
 				var obs_x : int = screen_size.x + score + 100
@@ -140,6 +139,7 @@ func remove_obs(obs):
 	
 func hit_obs(body):
 	if body.name == "Dino":
+		check_high_score()
 		new_game()
  
 func show_score():
@@ -156,13 +156,13 @@ func adjust_difficulty():
 		difficulty = MAX_DIFFICULTY
 
 func game_over():
-	check_high_score()
+	#check_high_score()
 	get_tree().paused = true
 	game_running = false
 	#$GameOver.show()
 	
 func win():
-	if score / SCORE_MODIFIER >= 2500:
+	if score / SCORE_MODIFIER >= 4000:
 		check_high_score()
 		get_tree().paused = true
 		game_running = false

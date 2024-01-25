@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://p2pdsrhp4j3" path="res://scenes/russie/bg.tscn" id="2_nddor"]
 [ext_resource type="PackedScene" uid="uid://ctcw3ivomlqyj" path="res://scenes/russie/ground.tscn" id="3_p0e47"]
 [ext_resource type="PackedScene" uid="uid://bhfgcvrob2nin" path="res://scenes/russie/dino.tscn" id="4_pfvw5"]
-[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/base_map/scenes/hud.tscn" id="5_yjr1v"]
+[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/usa/hud.tscn" id="5_yjr1v"]
 [ext_resource type="PackedScene" uid="uid://dhtbgjj451iyf" path="res://scenes/russie/game_over.tscn" id="6_dmmbo"]
 [ext_resource type="PackedScene" uid="uid://dlfl4adjacg63" path="res://scenes/russie/win.tscn" id="7_f5cpv"]
 [ext_resource type="AudioStream" uid="uid://ub6alemv64qi" path="res://assets/russie/sound/Musique_Russe.wav" id="8_yo3im"]

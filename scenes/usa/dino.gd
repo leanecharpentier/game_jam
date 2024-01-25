@@ -5,7 +5,11 @@ const JUMP_SPEED : int = -1800
 const DUCK_SPEED : int = 1500
 
 func _physics_process(delta):
-	velocity.y += GRAVITY * delta
+	
+	if global.bonus == true:
+		velocity.y += (GRAVITY - 1000) * delta
+	else:
+		velocity.y += GRAVITY * delta
 	if is_on_floor():
 		if not get_parent().game_running:
 			$AnimatedSprite2D.play("idle")

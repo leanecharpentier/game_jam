@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cp2mgsbvteayo" path="res://scenes/usa/bg.tscn" id="2_prqdn"]
 [ext_resource type="PackedScene" uid="uid://c53a4f01uc3eu" path="res://scenes/usa/ground.tscn" id="3_jefmu"]
 [ext_resource type="PackedScene" uid="uid://btc68gkffhyut" path="res://scenes/usa/dino.tscn" id="4_wpap0"]
-[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/base_map/scenes/hud.tscn" id="5_yjr1v"]
+[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/usa/hud.tscn" id="5_yjr1v"]
 [ext_resource type="PackedScene" uid="uid://dl2612fbu3nn5" path="res://scenes/usa/game_over.tscn" id="6_fk6jg"]
 [ext_resource type="PackedScene" uid="uid://ch6e2a2tca1cx" path="res://scenes/usa/win.tscn" id="7_vjacj"]
 [ext_resource type="AudioStream" uid="uid://ceeu23kfl6bv4" path="res://assets/usa/sound/Musique_USA.wav" id="8_hqf4i"]
