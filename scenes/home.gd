@@ -7,6 +7,7 @@ func _ready():
 	$lockRussie.hide()
 	$lockChine.hide()
 	$lockEgypte.hide()
+	$AudioStreamPlayer.play()
 	if global.levelUSA == true:
 		$lockUsa.show()
 	if global.levelRussie == true:

@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://6yq203pnax3e"]
+[gd_scene load_steps=5 format=3 uid="uid://6yq203pnax3e"]
 
+[ext_resource type="Script" path="res://scenes/start.gd" id="1_1rsn4"]
 [ext_resource type="PackedScene" uid="uid://bu2aeluchgl3r" path="res://scenes/startHUD.tscn" id="2_ruvsc"]
 [ext_resource type="PackedScene" uid="uid://do0to2mssxq8a" path="res://scenes/bgMoov.tscn" id="2_w86ff"]
+[ext_resource type="AudioStream" uid="uid://dncr5yqf22ok7" path="res://assets/sound/farfadet.wav" id="3_wr8dj"]
 
 [node name="start" type="Control"]
 layout_mode = 3
@@ -10,7 +12,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1rsn4")
 
 [node name="bgMoov" parent="." instance=ExtResource("2_w86ff")]
 
 [node name="start" parent="." instance=ExtResource("2_ruvsc")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wr8dj")
