@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bikeacohmy0t"]
+
+[ext_resource type="Script" path="res://scenes/level_2.gd" id="1_y1d1f"]
+
+[node name="level2" type="Node"]
+script = ExtResource("1_y1d1f")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 117.0
+offset_bottom = 55.0
+text = "level 2"
