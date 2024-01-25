@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cw8b134m7mf7c" path="res://scenes/chine/bg.tscn" id="2_11blj"]
 [ext_resource type="PackedScene" uid="uid://ba0d8a2us7hcd" path="res://scenes/chine/ground.tscn" id="3_31ar6"]
 [ext_resource type="PackedScene" uid="uid://2plalcdah65d" path="res://scenes/chine/dino.tscn" id="4_w70hw"]
-[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/base_map/scenes/hud.tscn" id="5_yjr1v"]
+[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/usa/hud.tscn" id="5_yjr1v"]
 [ext_resource type="PackedScene" uid="uid://ceskl0wlfmh5y" path="res://scenes/chine/game_over.tscn" id="6_ooa8l"]
 [ext_resource type="PackedScene" uid="uid://vdif3x7h4cpt" path="res://scenes/chine/win.tscn" id="7_umvcl"]
 [ext_resource type="AudioStream" uid="uid://28qdh6japgxx" path="res://assets/chine/sound/Musique_Chinoise.wav" id="8_aa4vf"]

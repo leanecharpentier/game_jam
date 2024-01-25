@@ -1,13 +1,13 @@
 extends Node
 
 #preload obstacles
-var stump_scene = preload("res://scenes/france/bird.tscn")
+var stump_scene = preload("res://scenes/france/stump.tscn")
 var rock_scene = preload("res://scenes/france/rock.tscn")
 var barrel_scene = preload("res://scenes/france/barrel.tscn")
 var bird_scene = preload("res://scenes/france/bird.tscn")
 var obstacles_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
-var bird_heights := [235]
+var bird_heights := [735]
 
 #game variables
 const DINO_START_POS := Vector2i(150, 485)
@@ -18,9 +18,9 @@ const MAX_DIFFICULTY : int = 2
 var score : int
 var high_score : int
 var speed : float
-const START_SPEED : float = 15.0
+const START_SPEED : float = 10.0
 const SPEED_MODIFIER : int = 3000
-const MAX_SPEED : int = 30
+const MAX_SPEED : int = 20
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
@@ -36,7 +36,6 @@ func _ready():
 	_new_game()
 
 func _new_game():
-	print("Bouton 'restart' pressé.")
 	#reset variables
 	score = 0
 	show_score()
@@ -58,7 +57,6 @@ func _new_game():
 	#reset hud and hide game over button
 	$HUD.get_node("StartLabel").show()
 	#$GameOver.hide()
-	$Button.hide()
 	
 	#hide win text
 	$Win.hide()
@@ -142,6 +140,7 @@ func remove_obs(obs):
 	
 func hit_obs(body):
 	if body.name == "Dino":
+		check_high_score()
 		_new_game()
  
 func show_score():
@@ -149,7 +148,10 @@ func show_score():
 
 func check_high_score():
 	if score > high_score:
-		high_score = score
+		if global.bonus == true:
+			high_score = score + 10000
+		else:
+			high_score = score
 		$HUD.get_node("HighLabel").text = "HIGH SCORE: " + str(high_score / SCORE_MODIFIER)
 
 func adjust_difficulty():
@@ -158,14 +160,14 @@ func adjust_difficulty():
 		difficulty = MAX_DIFFICULTY
 
 func game_over():
-	check_high_score()
+	#check_high_score()
 	get_tree().paused = true
 	game_running = false
 	$Button.show()
 	#$GameOver.show()
 	
 func win():
-	if score / SCORE_MODIFIER >= 100:
+	if score / SCORE_MODIFIER >= 3000:
 		check_high_score()
 		get_tree().paused = true
 		game_running = false

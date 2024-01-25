@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3c45fcat1u33" path="res://scenes/egypte/bg.tscn" id="2_5j5od"]
 [ext_resource type="PackedScene" uid="uid://ccodu0dfc33po" path="res://scenes/egypte/ground.tscn" id="3_qwtvc"]
 [ext_resource type="PackedScene" uid="uid://cry5ugkwnxt5t" path="res://scenes/egypte/dino.tscn" id="4_n238n"]
-[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/base_map/scenes/hud.tscn" id="5_yjr1v"]
+[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/usa/hud.tscn" id="5_yjr1v"]
 [ext_resource type="PackedScene" uid="uid://4akstrb1jpcd" path="res://scenes/egypte/game_over.tscn" id="6_5gpc5"]
 [ext_resource type="PackedScene" uid="uid://pkji3t6ocf1b" path="res://scenes/egypte/win.tscn" id="7_tdihv"]
 [ext_resource type="AudioStream" uid="uid://dqjus3f02f5rt" path="res://assets/egypte/sound/Musique_Egypte.wav" id="8_b87s1"]

@@ -7,9 +7,9 @@ texture_filter = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(5, 5)
+scale = Vector2(7, 7)
 texture = ExtResource("1_nokoe")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 scale = Vector2(4, 4)
-polygon = PackedVector2Array(10, -0.25, 20.75, 1, 22, 20.25, -21.75, 20.25, -20.25, 1.25, -9.25, -0.5, -5, -11.75, 0, -20.5, 7.25, -10)
+polygon = PackedVector2Array(14.25, -0.25, 29.25, 1.75, 31.75, 28.75, -30.75, 28.75, -29.25, 0.75, -12.25, -1, -8.75, -13, 0.25, -30.25, 8.75, -15)
