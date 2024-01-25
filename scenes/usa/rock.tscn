@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://disrf54vafkds"]
+
+[ext_resource type="Texture2D" uid="uid://5gmfloqpeswp" path="res://assets/usa/img/obstacles/cactus-america.png" id="1_kk3nk"]
+
+[node name="Rock" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_kk3nk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(16.25, -11.5, 16.25, -3.5, 7.75, 1.75, 7.75, 8.75, 17, 10.5, 19, 18.5, -19, 18.5, -18.25, 10, -14.25, 5.25, -10.25, 4.75, -10, -1.5, -17.25, -5, -17.5, -13.75, -5, -18.75, 4.25, -18.75)

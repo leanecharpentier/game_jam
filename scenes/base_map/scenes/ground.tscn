@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpwqpsr0b42gr"]
+
+[ext_resource type="Texture2D" uid="uid://5e717drdvg4b" path="res://scenes/base_map/assets/img/background/ground_paris_2.png" id="1_fkkh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrh5n"]
+size = Vector2(3840, 100)
+
+[node name="Ground" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 552)
+texture = ExtResource("1_fkkh5")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2880, 602)
+texture = ExtResource("1_fkkh5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1920, 602)
+shape = SubResource("RectangleShape2D_hrh5n")

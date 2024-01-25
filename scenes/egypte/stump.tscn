@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvh3m05vls2en"]
+
+[ext_resource type="Texture2D" uid="uid://xt0gqluk21th" path="res://assets/egypte/img/obstacles/momie_egypte.png" id="1_k1mjf"]
+
+[node name="Stump" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_k1mjf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(7, -20.6667, 8, -10, 5, -5.33333, 14.3333, -4.33333, 20, -0.666667, 19.6667, 6.33333, 12, 4.66667, 8.66667, 1.66667, 4.66667, 3.33333, 2.33333, 18.3333, 5.33333, 29, -13.3333, 29, -13, 13.6667, -19.6667, -3.33333, -19.6667, -22, -14.3333, -28.6667, -2.66667, -28.6667)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb804ug3cv4ax"]
+
+[ext_resource type="Texture2D" uid="uid://bsnkfjopq620" path="res://scenes/base_map/assets/img/obstacles/barriere_france.png" id="1_kgdw7"]
+
+[node name="Barrel" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_kgdw7")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(19.75, -9, 13.25, 14.75, -20, 16.5, -16, -8, -9, -13, -4.75, -9.25, 7.25, -9.75, 12.75, -16.75)

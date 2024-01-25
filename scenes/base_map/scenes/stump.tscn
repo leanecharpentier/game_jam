@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c62ov2ndwjnpf"]
+
+[ext_resource type="Texture2D" uid="uid://drnoa8s7m7774" path="res://scenes/base_map/assets/img/obstacles/tour_eiffel.png" id="1_1271s"]
+
+[node name="Stump" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_1271s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(0, -23.75, 5.75, 2, 12.25, 22.5, -12.75, 22.5, -6.25, 3.5)

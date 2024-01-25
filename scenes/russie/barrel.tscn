@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq1wnqrdplirt"]
+
+[ext_resource type="Texture2D" uid="uid://7x4wc5vf678i" path="res://assets/russie/img/obstacles/drapeau_russe.png" id="1_tnkuy"]
+
+[node name="Barrel" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("1_tnkuy")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(15.25, 2.75, -11.75, 9.5, -12.25, 20.75, -14.5, 21, -14.5, -13.75, 14, -20)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cysfb1awspss8"]
+
+[ext_resource type="Texture2D" uid="uid://dc4pwrdnha1vh" path="res://assets/egypte/img/obstacles/DROM-06.png" id="1_faf2m"]
+
+[node name="Rock" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_faf2m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(18.6667, 27, 0.333333, 26.6667, -2.33333, 7, -13.3333, 3.66667, -18.6667, -10.6667, -27.3333, -15.6667, -15.3333, -27, -9.33333, -11, 6.33333, -22, 17.6667, -15.3333, 26.3333, 4)

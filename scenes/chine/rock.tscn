@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhgavhdwy6x57"]
+
+[ext_resource type="Texture2D" uid="uid://w1ejix4bfh3j" path="res://assets/chine/img/obstacles/sushi_chine.png" id="1_6ej7h"]
+
+[node name="Rock" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_6ej7h")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(22.3333, -7.33333, 24, 24.3333, -23, 24.6667, -21.6667, -6, -5.33333, -24.6667, 3.66667, -25)

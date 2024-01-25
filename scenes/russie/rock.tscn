@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bckkqifmjnryj"]
+
+[ext_resource type="Texture2D" uid="uid://c8wphc1xig8jy" path="res://assets/russie/img/obstacles/ours_russie.png" id="1_mflkj"]
+
+[node name="Rock" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_mflkj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(14.75, -7.25, 20, 10.25, -11, 10.5, -10.5, 0.5, -20, -0.25, -18.75, -5, -8.5, -10.75, 7.5, -10.5)

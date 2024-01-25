@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp2mgsbvteayo"]
+
+[ext_resource type="Texture2D" uid="uid://c6p8c64db1x4x" path="res://assets/usa/img/background/fond_usa.png" id="1_ub1pf"]
+
+[node name="bg" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ub1pf")
+centered = false

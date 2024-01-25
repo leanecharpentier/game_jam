@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw6demstgi42f"]
+
+[ext_resource type="Texture2D" uid="uid://dpnugx77lren1" path="res://assets/usa/img/obstacles/avion_usa.png" id="2_0bkqs"]
+[ext_resource type="Script" path="res://scenes/base_map/scenes/bird.gd" id="3_2omff"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e3s8r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0bkqs")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[node name="Bird" type="Area2D"]
+script = ExtResource("3_2omff")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_e3s8r")
+animation = &"fly"
+autoplay = "fly"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-60, 24, -14, 24, 39, 20, 72, 8, 75, -24, 63, -24, 43, -3, -57, -3, -75, 9)
