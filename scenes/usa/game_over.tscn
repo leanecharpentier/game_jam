@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dl2612fbu3nn5"]
+[gd_scene load_steps=4 format=3 uid="uid://dl2612fbu3nn5"]
 
-[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://scenes/base_map/assets/fonts/retro.ttf" id="1_txg7i"]
-[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/usa/fonts/retro.ttf" id="2_4c8tq"]
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://scenes/base_map/assets/fonts/retro.ttf" id="2_4c8tq"]
 [ext_resource type="Texture2D" uid="uid://cq68bx8o0hn2a" path="res://assets/usa/img/GAMEOVER.png" id="2_w6i6i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_640bj"]
@@ -21,7 +20,7 @@ offset_right = 112.5
 offset_bottom = 29.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_txg7i")
+theme_override_fonts/font = ExtResource("2_4c8tq")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/hover = SubResource("StyleBoxFlat_640bj")
 text = "RESTART"

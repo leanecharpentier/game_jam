@@ -32,10 +32,11 @@ func _ready():
 	#play music
 	$AudioStreamPlayer.play()
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
-	$GameOver.get_node("Button").pressed.connect(new_game)
-	new_game()
+	#$GameOver.get_node("Button").pressed.connect(_new_game)
+	_new_game()
 
-func new_game():
+func _new_game():
+	print("Bouton 'restart' pressé.")
 	#reset variables
 	score = 0
 	show_score()
@@ -56,7 +57,8 @@ func new_game():
 	
 	#reset hud and hide game over button
 	$HUD.get_node("StartLabel").show()
-	$GameOver.hide()
+	#$GameOver.hide()
+	$Button.hide()
 	
 	#hide win text
 	$Win.hide()
@@ -69,7 +71,6 @@ func _process(delta):
 		speed = START_SPEED + score / SPEED_MODIFIER
 		if speed > MAX_SPEED:
 			speed = MAX_SPEED
-		print(speed)
 		adjust_difficulty()
 			
 		#generate obstacles
@@ -141,7 +142,7 @@ func remove_obs(obs):
 	
 func hit_obs(body):
 	if body.name == "Dino":
-		game_over()
+		_new_game()
  
 func show_score():
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
@@ -160,7 +161,8 @@ func game_over():
 	check_high_score()
 	get_tree().paused = true
 	game_running = false
-	$GameOver.show()
+	$Button.show()
+	#$GameOver.show()
 	
 func win():
 	if score / SCORE_MODIFIER >= 2500:
@@ -169,7 +171,7 @@ func win():
 		game_running = false
 		$Win.show()
 		$Win.get_node("WinSound").play()
-		
-		
-		
-		
+
+
+func _on_button_pressed():
+	game_over()

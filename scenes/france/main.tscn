@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk7qn2i4dolk1"]
+[gd_scene load_steps=8 format=3 uid="uid://bk7qn2i4dolk1"]
 
 [ext_resource type="Script" path="res://scenes/france/main.gd" id="1_w8fv1"]
 [ext_resource type="PackedScene" uid="uid://3l1l788ux7b5" path="res://scenes/france/bg.tscn" id="2_e3tcg"]
 [ext_resource type="PackedScene" uid="uid://c3khp6qsm88ps" path="res://scenes/france/ground.tscn" id="3_flff6"]
 [ext_resource type="PackedScene" uid="uid://drhw7r8686yvq" path="res://scenes/france/dino.tscn" id="4_df8xg"]
 [ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/base_map/scenes/hud.tscn" id="5_yjr1v"]
-[ext_resource type="PackedScene" uid="uid://blau0bfqxrsn7" path="res://scenes/france/game_over.tscn" id="6_e08fb"]
 [ext_resource type="PackedScene" uid="uid://diy63fy68ge1m" path="res://scenes/france/win.tscn" id="7_yf6w5"]
 [ext_resource type="AudioStream" uid="uid://dkknasbqfelu0" path="res://assets/france/sound/Musique_france.wav" id="8_a31a3"]
 
@@ -24,11 +23,26 @@ position = Vector2(960, 540)
 
 [node name="HUD" parent="." instance=ExtResource("5_yjr1v")]
 
-[node name="GameOver" parent="." instance=ExtResource("6_e08fb")]
-
 [node name="Win" parent="." instance=ExtResource("7_yf6w5")]
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.5
+offset_top = -45.5
+offset_right = 189.5
+offset_bottom = 45.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "kvhdk;gvhjdf"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_a31a3")
 volume_db = -25.0
 autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
