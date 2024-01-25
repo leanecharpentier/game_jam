@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu2aeluchgl3r"]
+[gd_scene load_steps=3 format=3 uid="uid://6yq203pnax3e"]
 
-[ext_resource type="Script" path="res://scenes/start.gd" id="1_1rsn4"]
-[ext_resource type="Theme" uid="uid://bcsck8gljqbnw" path="res://assets/style/buttonAnswer.tres" id="2_xglnq"]
+[ext_resource type="PackedScene" uid="uid://bu2aeluchgl3r" path="res://scenes/startHUD.tscn" id="2_ruvsc"]
+[ext_resource type="PackedScene" uid="uid://do0to2mssxq8a" path="res://scenes/bgMoov.tscn" id="2_w86ff"]
 
 [node name="start" type="Control"]
 layout_mode = 3
@@ -10,31 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1rsn4")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.3
-anchor_top = 0.25
-anchor_right = 0.7
-anchor_bottom = 0.75
-grow_horizontal = 2
-grow_vertical = 2
+[node name="bgMoov" parent="." instance=ExtResource("2_w86ff")]
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="play" type="Button" parent="MarginContainer/VBoxContainer2"]
-layout_mode = 2
-theme = ExtResource("2_xglnq")
-text = "Jouer"
-
-[node name="quit" type="Button" parent="MarginContainer/VBoxContainer2"]
-layout_mode = 2
-theme = ExtResource("2_xglnq")
-text = "Quitter"
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer2/quit" to="." method="_on_quit_pressed"]
+[node name="start" parent="." instance=ExtResource("2_ruvsc")]

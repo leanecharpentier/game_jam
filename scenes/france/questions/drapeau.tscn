@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://ctfxgx6tgr4cf"]
+
+[ext_resource type="Script" path="res://scenes/france/questions/drapeau.gd" id="1_xs2od"]
+[ext_resource type="FontFile" uid="uid://b4mplch8yuwbw" path="res://assets/visuels/font/retro.ttf" id="2_8i1m1"]
+[ext_resource type="Theme" uid="uid://bnmaa78tph0x" path="res://assets/style/dragButton.tres" id="3_xlwp4"]
+[ext_resource type="Texture2D" uid="uid://dnpo8cbdp0dst" path="res://assets/visuels/drag/luxembourg.png" id="4_jl8i4"]
+[ext_resource type="Texture2D" uid="uid://dn5ahk6mbs252" path="res://assets/visuels/drag/paysbas.png" id="5_v8jlr"]
+[ext_resource type="Texture2D" uid="uid://dbly55j8qahwk" path="res://assets/visuels/drag/france.png" id="6_r6nmd"]
+[ext_resource type="Texture2D" uid="uid://4ixd7hdfu7rp" path="res://assets/visuels/drag/tchequie.png" id="7_rcto0"]
+[ext_resource type="Theme" uid="uid://baddwpgxvm816" path="res://assets/style/buttonSettings.tres" id="8_45f1t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ctcmf"]
+font = ExtResource("2_8i1m1")
+font_size = 35
+
+[node name="question2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xs2od")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.486275, 0.768627, 0.682353, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quel est le drapeau de la France ?"
+label_settings = SubResource("LabelSettings_ctcmf")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="luxembourg" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_xlwp4")
+icon = ExtResource("4_jl8i4")
+
+[node name="paysBas" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_xlwp4")
+icon = ExtResource("5_v8jlr")
+
+[node name="france" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_xlwp4")
+icon = ExtResource("6_r6nmd")
+
+[node name="tchequie" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_xlwp4")
+icon = ExtResource("7_rcto0")
+
+[node name="retour" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.1
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_45f1t")
+text = "Retour"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/luxembourg" to="." method="_on_luxembourg_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/paysBas" to="." method="_on_pays_bas_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/france" to="." method="_on_france_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/tchequie" to="." method="_on_tchequie_pressed"]
+[connection signal="pressed" from="retour" to="." method="_on_retour_pressed"]

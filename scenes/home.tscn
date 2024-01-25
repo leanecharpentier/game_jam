@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0d18j1mwrlii"]
+[gd_scene load_steps=13 format=3 uid="uid://d0d18j1mwrlii"]
 
 [ext_resource type="Script" path="res://scenes/home.gd" id="1_70trm"]
-[ext_resource type="Texture2D" uid="uid://g24ep3u4pmq2" path="res://assets/visuels/carte.jpg" id="1_74m7y"]
-[ext_resource type="Theme" uid="uid://bcsck8gljqbnw" path="res://assets/style/buttonAnswer.tres" id="3_pwyl2"]
+[ext_resource type="Texture2D" uid="uid://bhnjm2debj872" path="res://assets/visuels/carte.png" id="2_12ijm"]
+[ext_resource type="FontFile" uid="uid://b4mplch8yuwbw" path="res://assets/visuels/font/retro.ttf" id="3_otqco"]
+[ext_resource type="Theme" uid="uid://bjd8kqse8028u" path="res://assets/style/labelPays.tres" id="3_pjiva"]
+[ext_resource type="Theme" uid="uid://dpkfqmfoxcl3w" path="res://assets/style/numberButton.tres" id="5_4e8p0"]
+[ext_resource type="Texture2D" uid="uid://dgpoacekc3uu" path="res://assets/visuels/lock.png" id="5_ojqjk"]
+[ext_resource type="Theme" uid="uid://baddwpgxvm816" path="res://assets/style/buttonSettings.tres" id="6_r1dgb"]
+[ext_resource type="PackedScene" uid="uid://cgb14xmwi3jv3" path="res://scenes/regles.tscn" id="8_yvsoc"]
+[ext_resource type="Texture2D" uid="uid://c3c174cbyvasa" path="res://assets/visuels/close.png" id="9_dgq6w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tbtri"]
+font = ExtResource("3_otqco")
+font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5pb0"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vykx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="home" type="Control"]
 layout_mode = 3
@@ -13,69 +29,267 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_70trm")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.207843, 0.658824, 0.878431, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-22, -57)
-scale = Vector2(1.3398, 1.3398)
-texture = ExtResource("1_74m7y")
+position = Vector2(253, -158)
+scale = Vector2(0.923891, 0.923892)
+texture = ExtResource("2_12ijm")
 centered = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 100.0
+offset_top = 143.0
+offset_right = 701.0
+offset_bottom = 224.0
+text = "Choisis un niveau sur la carte : "
+label_settings = SubResource("LabelSettings_tbtri")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.3
+anchor_right = 0.05
+anchor_bottom = 0.3
+offset_left = 4.0
+offset_top = -67.0
+offset_right = 345.0
+offset_bottom = 550.0
+theme_override_constants/separation = 20
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="1" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="france" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "France"
+
+[node name="lock" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+icon = ExtResource("5_ojqjk")
+clip_text = true
+icon_alignment = 1
+
+[node name="2" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="usa" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "Etats-Unis"
+
+[node name="lock2" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+icon = ExtResource("5_ojqjk")
+clip_text = true
+icon_alignment = 1
+
+[node name="3" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="russie" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "Russie
+"
+
+[node name="lock3" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+icon = ExtResource("5_ojqjk")
+clip_text = true
+icon_alignment = 1
+
+[node name="4" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="chine" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "Chine"
+
+[node name="lock4" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+icon = ExtResource("5_ojqjk")
+clip_text = true
+icon_alignment = 1
+
+[node name="5" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="egypte" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+text = "Egypte"
+
+[node name="lock5" type="Button" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("3_pjiva")
+icon = ExtResource("5_ojqjk")
+clip_text = true
+icon_alignment = 1
+
+[node name="regles" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_r1dgb")
+text = "Règles
+"
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_r1dgb")
+text = "Quitter"
 
 [node name="france" type="Button" parent="."]
 layout_mode = 0
-offset_left = 904.0
-offset_top = 503.0
-offset_right = 964.0
-offset_bottom = 534.0
-theme = ExtResource("3_pwyl2")
-text = "France
-"
+offset_left = 1124.0
+offset_top = 479.0
+offset_right = 1209.0
+offset_bottom = 538.0
+theme = ExtResource("5_4e8p0")
+text = "    1    "
 
 [node name="usa" type="Button" parent="."]
 layout_mode = 0
-offset_left = 370.0
-offset_top = 505.0
-offset_right = 457.0
-offset_bottom = 536.0
-theme = ExtResource("3_pwyl2")
-text = "Etats-Unis
+offset_left = 770.0
+offset_top = 472.0
+offset_right = 857.0
+offset_bottom = 531.0
+theme = ExtResource("5_4e8p0")
+text = "2
 "
 
 [node name="russie" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1387.0
-offset_top = 414.0
-offset_right = 1474.0
-offset_bottom = 445.0
-theme = ExtResource("3_pwyl2")
-text = "Russie
+offset_left = 1475.0
+offset_top = 421.0
+offset_right = 1562.0
+offset_bottom = 480.0
+theme = ExtResource("5_4e8p0")
+text = "3
 "
 
 [node name="chine" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1442.0
-offset_top = 618.0
-offset_right = 1529.0
-offset_bottom = 649.0
-theme = ExtResource("3_pwyl2")
-text = "Chine"
+offset_left = 1516.0
+offset_top = 549.0
+offset_right = 1603.0
+offset_bottom = 608.0
+theme = ExtResource("5_4e8p0")
+text = "4"
 
 [node name="egypte" type="Button" parent="."]
 layout_mode = 0
-offset_left = 940.0
-offset_top = 621.0
-offset_right = 1027.0
-offset_bottom = 652.0
-theme = ExtResource("3_pwyl2")
-text = "Egypte"
+offset_left = 1176.0
+offset_top = 565.0
+offset_right = 1263.0
+offset_bottom = 624.0
+theme = ExtResource("5_4e8p0")
+text = "5"
 
-[node name="quit" type="Button" parent="."]
+[node name="lockFrance" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 42.0
-offset_right = 112.0
-offset_bottom = 73.0
-theme = ExtResource("3_pwyl2")
-text = "Quitter"
+offset_left = 376.0
+offset_top = 262.0
+offset_right = 436.0
+offset_bottom = 317.0
+color = Color(0.486275, 0.768627, 0.682353, 1)
 
+[node name="lockUsa" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 352.0
+offset_right = 437.0
+offset_bottom = 408.0
+color = Color(0.486275, 0.768627, 0.682353, 1)
+
+[node name="lockRussie" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 442.0
+offset_right = 434.0
+offset_bottom = 497.0
+color = Color(0.486275, 0.768627, 0.682353, 1)
+
+[node name="lockChine" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 534.0
+offset_right = 432.0
+offset_bottom = 589.0
+color = Color(0.486275, 0.768627, 0.682353, 1)
+
+[node name="lockEgypte" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 625.0
+offset_right = 433.0
+offset_bottom = 680.0
+color = Color(0.486275, 0.768627, 0.682353, 1)
+
+[node name="regles" parent="." instance=ExtResource("8_yvsoc")]
+layout_mode = 1
+
+[node name="quitRegle" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k5pb0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8vykx")
+icon = ExtResource("9_dgq6w")
+flat = true
+icon_alignment = 2
+vertical_icon_alignment = 0
+
+[connection signal="pressed" from="VBoxContainer/regles" to="." method="_on_regles_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="france" to="." method="_on_france_pressed"]
 [connection signal="pressed" from="usa" to="." method="_on_usa_pressed"]
-[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="russie" to="." method="_on_russie_pressed"]
+[connection signal="pressed" from="chine" to="." method="_on_chine_pressed"]
+[connection signal="pressed" from="egypte" to="." method="_on_egypte_pressed"]
+[connection signal="pressed" from="quitRegle" to="." method="_on_quit_regle_pressed"]

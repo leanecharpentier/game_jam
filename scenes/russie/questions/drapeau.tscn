@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://dhjw4f8o2il1w"]
+
+[ext_resource type="Script" path="res://scenes/russie/questions/drapeau.gd" id="1_ioml4"]
+[ext_resource type="FontFile" uid="uid://b4mplch8yuwbw" path="res://assets/visuels/font/retro.ttf" id="2_lpjcc"]
+[ext_resource type="Theme" uid="uid://bnmaa78tph0x" path="res://assets/style/dragButton.tres" id="3_a8snc"]
+[ext_resource type="Texture2D" uid="uid://dnpo8cbdp0dst" path="res://assets/visuels/drag/luxembourg.png" id="4_fskm6"]
+[ext_resource type="Texture2D" uid="uid://ddepa3rwewkfd" path="res://assets/visuels/drag/russie.png" id="4_gvn46"]
+[ext_resource type="Texture2D" uid="uid://dn5ahk6mbs252" path="res://assets/visuels/drag/paysbas.png" id="5_0ksud"]
+[ext_resource type="Texture2D" uid="uid://cpbn5yecl8rwd" path="res://assets/visuels/drag/thailande.png" id="6_yjf6t"]
+[ext_resource type="Theme" uid="uid://baddwpgxvm816" path="res://assets/style/buttonSettings.tres" id="8_2ttyp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ctcmf"]
+font = ExtResource("2_lpjcc")
+font_size = 35
+
+[node name="question2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ioml4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.486275, 0.768627, 0.682353, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quel est le drapeau de la Russie ?"
+label_settings = SubResource("LabelSettings_ctcmf")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="russie" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_a8snc")
+icon = ExtResource("4_gvn46")
+
+[node name="paysbas" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_a8snc")
+icon = ExtResource("5_0ksud")
+
+[node name="thailande" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_a8snc")
+icon = ExtResource("6_yjf6t")
+
+[node name="luxembourg" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_a8snc")
+icon = ExtResource("4_fskm6")
+
+[node name="retour" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.1
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_2ttyp")
+text = "Retour"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/russie" to="." method="_on_russie_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/paysbas" to="." method="_on_paysbas_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/thailande" to="." method="_on_thailande_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/luxembourg" to="." method="_on_luxembourg_pressed"]
+[connection signal="pressed" from="retour" to="." method="_on_retour_pressed"]
