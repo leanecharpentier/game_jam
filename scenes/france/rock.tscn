@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://2okw8kg0w6cl"]
+
+[ext_resource type="Texture2D" uid="uid://hv6y8w5iv7k6" path="res://assets/france/img/obstacles/drapeau_france.png" id="1_rc3x3"]
+
+[node name="Rock" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_rc3x3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(5, 5)
+polygon = PackedVector2Array(12.4, 3.4, -9.4, 7.2, -9.4, 16, -12.5, 16, -12.4, -13.4, 12.5, -16)

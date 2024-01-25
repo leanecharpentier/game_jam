@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnrq5svrs2h7w"]
+
+[ext_resource type="Texture2D" uid="uid://dcerjtxur1hpk" path="res://assets/chine/img/obstacles/temple_chine.png" id="1_o8he7"]
+
+[node name="Stump" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_o8he7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(8.5, -15.5, 15.25, 10, 22.5, 25, -22.5, 25, -14.5, 9.75, -10, -14.5, -4.25, -24.25, 2.25, -24)

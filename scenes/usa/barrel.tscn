@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm7s2bp4c23oc"]
+
+[ext_resource type="Texture2D" uid="uid://fewyc5n1e3td" path="res://assets/usa/img/obstacles/america_1.png" id="1_nokoe"]
+
+[node name="Barrel" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = ExtResource("1_nokoe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(10, -0.25, 20.75, 1, 22, 20.25, -21.75, 20.25, -20.25, 1.25, -9.25, -0.5, -5, -11.75, 0, -20.5, 7.25, -10)

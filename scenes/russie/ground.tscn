@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctcw3ivomlqyj"]
+
+[ext_resource type="Texture2D" uid="uid://c7u2herbi87xy" path="res://assets/russie/img/background/sol_moscou.png" id="1_ll5f7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrh5n"]
+size = Vector2(3840, 100)
+
+[node name="Ground" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 552)
+texture = ExtResource("1_ll5f7")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2880, 602)
+texture = ExtResource("1_ll5f7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1920, 602)
+shape = SubResource("RectangleShape2D_hrh5n")

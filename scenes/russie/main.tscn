@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1dbqcrurh3f"]
+
+[ext_resource type="Script" path="res://scenes/russie/main.gd" id="1_k3grs"]
+[ext_resource type="PackedScene" uid="uid://p2pdsrhp4j3" path="res://scenes/russie/bg.tscn" id="2_nddor"]
+[ext_resource type="PackedScene" uid="uid://ctcw3ivomlqyj" path="res://scenes/russie/ground.tscn" id="3_p0e47"]
+[ext_resource type="PackedScene" uid="uid://bhfgcvrob2nin" path="res://scenes/russie/dino.tscn" id="4_pfvw5"]
+[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/base_map/scenes/hud.tscn" id="5_yjr1v"]
+[ext_resource type="PackedScene" uid="uid://dhtbgjj451iyf" path="res://scenes/russie/game_over.tscn" id="6_dmmbo"]
+[ext_resource type="PackedScene" uid="uid://dlfl4adjacg63" path="res://scenes/russie/win.tscn" id="7_f5cpv"]
+[ext_resource type="AudioStream" uid="uid://ub6alemv64qi" path="res://assets/russie/sound/Musique_Russe.wav" id="8_yo3im"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_k3grs")
+
+[node name="bg" parent="." instance=ExtResource("2_nddor")]
+
+[node name="Ground" parent="." instance=ExtResource("3_p0e47")]
+position = Vector2(0, 428)
+
+[node name="Dino" parent="." instance=ExtResource("4_pfvw5")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="HUD" parent="." instance=ExtResource("5_yjr1v")]
+
+[node name="GameOver" parent="." instance=ExtResource("6_dmmbo")]
+
+[node name="Win" parent="." instance=ExtResource("7_f5cpv")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_yo3im")
+volume_db = -25.0
+autoplay = true

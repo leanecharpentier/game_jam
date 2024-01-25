@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp48unsmoy2w"
-path="res://.godot/imported/Perso Wolrd Tour version 789332157463 1.png-e5b3f081d459c0f76eb5c3345b1f1f11.ctex"
+path="res://.godot/imported/Perso Wolrd Tour version 789332157463 1.png-200f589eb018ee7f9b817b25ee381e7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/Perso Wolrd Tour version 789332157463 1.png"
-dest_files=["res://.godot/imported/Perso Wolrd Tour version 789332157463 1.png-e5b3f081d459c0f76eb5c3345b1f1f11.ctex"]
+source_file="res://scenes/base_map/assets/img/Perso Wolrd Tour version 789332157463 1.png"
+dest_files=["res://.godot/imported/Perso Wolrd Tour version 789332157463 1.png-200f589eb018ee7f9b817b25ee381e7e.ctex"]
 
 [params]
 

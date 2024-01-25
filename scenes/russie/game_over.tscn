@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhtbgjj451iyf"]
+
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://scenes/base_map/assets/fonts/retro.ttf" id="1_txg7i"]
+[ext_resource type="Texture2D" uid="uid://dvk5xy22pp2fx" path="res://assets/russie/img/GAMEOVER.png" id="2_t01hr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_640bj"]
+bg_color = Color(0.996078, 0.172549, 0, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.5
+offset_top = -29.5
+offset_right = 112.5
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_txg7i")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_640bj")
+text = "RESTART"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -254.0
+offset_right = 254.0
+offset_bottom = 347.0
+grow_horizontal = 2
+texture = ExtResource("2_t01hr")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://wy8ubjaqkho2"]
+
+[ext_resource type="Texture2D" uid="uid://mrwy6du0imn" path="res://assets/usa/img/obstacles/statue_america.png" id="1_u2d23"]
+
+[node name="Stump" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_u2d23")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(2.75, -11, 8.5, 2.25, 6, 21.25, -5.75, 21.25, -7, -21.25, -2.75, -21)

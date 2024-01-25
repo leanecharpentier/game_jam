@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://bfiwsyowci5tp"]
 
-[ext_resource type="Script" path="res://scenes/dino.gd" id="1_cxaui"]
-[ext_resource type="AudioStream" uid="uid://dscpg6m666dta" path="res://assets/sound/jump.wav" id="2_souvo"]
-[ext_resource type="Texture2D" uid="uid://bp48unsmoy2w" path="res://assets/img/Perso Wolrd Tour version 789332157463 1.png" id="3_lmqx0"]
-[ext_resource type="Texture2D" uid="uid://52p4id5dcxkq" path="res://assets/img/Perso Wolrd Tour version 789332157463 1 (1).png" id="4_vbb35"]
-[ext_resource type="Texture2D" uid="uid://b3ff5bp51sa2y" path="res://assets/img/Perso Wolrd Tour version 789332157463 idle 1 - Copie.png" id="5_8iikc"]
+[ext_resource type="Script" path="res://scenes/chine/dino.gd" id="1_6dipc"]
+[ext_resource type="Texture2D" uid="uid://bp48unsmoy2w" path="res://scenes/base_map/assets/img/Perso Wolrd Tour version 789332157463 1.png" id="3_lmqx0"]
+[ext_resource type="Texture2D" uid="uid://dquvs4anl7x82" path="res://scenes/base_map/assets/img/Perso Wolrd Tour version 789332157463 1 (1).png" id="4_vbb35"]
+[ext_resource type="Texture2D" uid="uid://b3ff5bp51sa2y" path="res://scenes/base_map/assets/img/Perso Wolrd Tour version 789332157463 idle 1 - Copie.png" id="5_8iikc"]
+[ext_resource type="AudioStream" uid="uid://dyv6tnswqv5ck" path="res://assets/chine/sound/WAHOU2.wav" id="5_cndi2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ahgc"]
 atlas = ExtResource("3_lmqx0")
@@ -87,7 +87,7 @@ size = Vector2(11.625, 22.875)
 [node name="Dino" type="CharacterBody2D"]
 z_index = 1
 scale = Vector2(8, 8)
-script = ExtResource("1_cxaui")
+script = ExtResource("1_6dipc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -105,5 +105,5 @@ position = Vector2(0.9375, 1.0625)
 shape = SubResource("RectangleShape2D_k0irk")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_souvo")
+stream = ExtResource("5_cndi2")
 volume_db = -35.0

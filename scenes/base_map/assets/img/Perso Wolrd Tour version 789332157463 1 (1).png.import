@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://52p4id5dcxkq"
-path="res://.godot/imported/Perso Wolrd Tour version 789332157463 1 (1).png-697cf8a0c128eaf693fd81bc45f121a1.ctex"
+uid="uid://dquvs4anl7x82"
+path="res://.godot/imported/Perso Wolrd Tour version 789332157463 1 (1).png-fb90d1730b7550e7d78961b20bbfb2de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/Perso Wolrd Tour version 789332157463 1 (1).png"
-dest_files=["res://.godot/imported/Perso Wolrd Tour version 789332157463 1 (1).png-697cf8a0c128eaf693fd81bc45f121a1.ctex"]
+source_file="res://scenes/base_map/assets/img/Perso Wolrd Tour version 789332157463 1 (1).png"
+dest_files=["res://.godot/imported/Perso Wolrd Tour version 789332157463 1 (1).png-fb90d1730b7550e7d78961b20bbfb2de.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bveogd64ts0vx"]
 
-[ext_resource type="Texture2D" uid="uid://dkw6thaio0hfe" path="res://assets/img/obstacles/rock.png" id="1_kwjjt"]
+[ext_resource type="Texture2D" uid="uid://dkw6thaio0hfe" path="res://scenes/base_map/assets/img/obstacles/rock.png" id="1_kwjjt"]
 
 [node name="Rock" type="Area2D"]
 texture_filter = 1

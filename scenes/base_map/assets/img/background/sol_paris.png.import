@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8bm1ms27uauq"
-path="res://.godot/imported/sol_paris.png-afa5fbf197b70890544d4be827c133d0.ctex"
+path="res://.godot/imported/sol_paris.png-ae6dbebc36d2b826e91a6746891c8f6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/background/sol_paris.png"
-dest_files=["res://.godot/imported/sol_paris.png-afa5fbf197b70890544d4be827c133d0.ctex"]
+source_file="res://scenes/base_map/assets/img/background/sol_paris.png"
+dest_files=["res://.godot/imported/sol_paris.png-ae6dbebc36d2b826e91a6746891c8f6e.ctex"]
 
 [params]
 

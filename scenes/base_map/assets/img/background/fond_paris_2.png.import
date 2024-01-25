@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3p23mefu0gyd"
-path="res://.godot/imported/fond_paris_2.png-900521b5207660266051b7b2720fc25d.ctex"
+path="res://.godot/imported/fond_paris_2.png-fa91141d766987d8e61a83b62ea014bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/background/fond_paris_2.png"
-dest_files=["res://.godot/imported/fond_paris_2.png-900521b5207660266051b7b2720fc25d.ctex"]
+source_file="res://scenes/base_map/assets/img/background/fond_paris_2.png"
+dest_files=["res://.godot/imported/fond_paris_2.png-fa91141d766987d8e61a83b62ea014bc.ctex"]
 
 [params]
 

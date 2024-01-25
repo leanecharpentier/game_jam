@@ -1,17 +1,17 @@
 extends Node
 
 #preload obstacles
-var stump_scene = preload("res://scenes/stump.tscn")
-var rock_scene = preload("res://scenes/rock.tscn")
-var barrel_scene = preload("res://scenes/barrel.tscn")
-var bird_scene = preload("res://scenes/bird.tscn")
+var stump_scene = preload("res://scenes/usa/stump.tscn")
+var rock_scene = preload("res://scenes/usa/rock.tscn")
+var barrel_scene = preload("res://scenes/usa/barrel.tscn")
+var bird_scene = preload("res://scenes/france/bird.tscn")
 var obstacles_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
 var bird_heights := [235]
 
 #game variables
-const DINO_START_POS := Vector2i(150, 485)
-const CAM_START_POS := Vector2i(960, 580)
+const DINO_START_POS = Vector2i(150, 485)
+const CAM_START_POS = Vector2i(960, 580)
 const SCORE_MODIFIER : int = 10
 var difficulty
 const MAX_DIFFICULTY : int = 2
@@ -97,19 +97,26 @@ func _process(delta):
 			$HUD.get_node("StartLabel").hide()
 
 func generate_obs():
-	#generate ground obstacles
-	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 400):
+#generate ground obstacles
+	if obstacles.is_empty() or (last_obs and last_obs.position.x < score + randi_range(300, 400)):
 		var obs_type = obstacles_types[randi() % obstacles_types.size()]
 		var obs
 		var max_obs = difficulty + 1
 		for i in range(randi() % max_obs + 1):
 			obs = obs_type.instantiate()
-			var obs_height = obs.get_node("Sprite2D").texture.get_height()
-			var obs_scale = obs.get_node("Sprite2D").scale
-			var obs_x : int = screen_size.x + score + 100 + (i * 100)
-			var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 30
-			last_obs = obs
-			add_obs(obs, obs_x, obs_y)
+			var sprite_node = obs.get_node("Sprite2D")
+
+			if sprite_node:
+				var obs_height = sprite_node.texture.get_height()
+				var obs_scale = sprite_node.scale
+				var obs_x : int = screen_size.x + score + 100 + (i * 100)
+				var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 30
+				last_obs = obs
+				add_obs(obs, obs_x, obs_y)
+			else:
+				# Gérez le cas où le nœud "Sprite2D" n'est pas trouvé dans l'objet obs
+				print("Erreur: Le nœud 'Sprite2D' n'a pas été trouvé dans l'objet obs.")
+
 		#random birds spawn
 		if difficulty == MAX_DIFFICULTY:
 			if (randi() % 2) == 0:

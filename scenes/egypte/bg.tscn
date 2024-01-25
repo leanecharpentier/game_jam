@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3c45fcat1u33"]
+
+[ext_resource type="Texture2D" uid="uid://dds5o0n0otlgi" path="res://assets/egypte/img/background/fond_gizeh.png" id="1_6s0yn"]
+
+[node name="bg" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6s0yn")
+centered = false

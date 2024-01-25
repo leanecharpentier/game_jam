@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm3bvcbm42wp"]
+
+[ext_resource type="Texture2D" uid="uid://bjsbodjer5s1a" path="res://assets/russie/img/obstacles/vodka_russie.png" id="1_77bcq"]
+
+[node name="Stump" type="Area2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_77bcq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(4, 4)
+polygon = PackedVector2Array(-1.25, -21.5, -1.5, -10.5, 3.5, -5.75, 3.5, 4.25, 15.75, 4.5, 15.75, 20.75, -13.75, 20.75, -13.75, -6, -8.75, -10.75, -8.75, -21.5)

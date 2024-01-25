@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3 uid="uid://4ywtdc70aark"]
+
+[ext_resource type="Script" path="res://scenes/chine/main.gd" id="1_x1qce"]
+[ext_resource type="PackedScene" uid="uid://cw8b134m7mf7c" path="res://scenes/chine/bg.tscn" id="2_11blj"]
+[ext_resource type="PackedScene" uid="uid://ba0d8a2us7hcd" path="res://scenes/chine/ground.tscn" id="3_31ar6"]
+[ext_resource type="PackedScene" uid="uid://2plalcdah65d" path="res://scenes/chine/dino.tscn" id="4_w70hw"]
+[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/base_map/scenes/hud.tscn" id="5_yjr1v"]
+[ext_resource type="PackedScene" uid="uid://ceskl0wlfmh5y" path="res://scenes/chine/game_over.tscn" id="6_ooa8l"]
+[ext_resource type="PackedScene" uid="uid://vdif3x7h4cpt" path="res://scenes/chine/win.tscn" id="7_umvcl"]
+[ext_resource type="AudioStream" uid="uid://28qdh6japgxx" path="res://assets/chine/sound/Musique_Chinoise.wav" id="8_aa4vf"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_x1qce")
+
+[node name="bg" parent="." instance=ExtResource("2_11blj")]
+
+[node name="Ground" parent="." instance=ExtResource("3_31ar6")]
+position = Vector2(0, 428)
+
+[node name="Dino" parent="." instance=ExtResource("4_w70hw")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="HUD" parent="." instance=ExtResource("5_yjr1v")]
+
+[node name="GameOver" parent="." instance=ExtResource("6_ooa8l")]
+
+[node name="Win" parent="." instance=ExtResource("7_umvcl")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_aa4vf")
+volume_db = -10.0
+autoplay = true

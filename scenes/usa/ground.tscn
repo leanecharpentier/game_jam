@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c53a4f01uc3eu"]
+
+[ext_resource type="Texture2D" uid="uid://i64m474nfayd" path="res://assets/usa/img/background/sol_usa.png" id="1_ffoxy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrh5n"]
+size = Vector2(3840, 100)
+
+[node name="Ground" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 552)
+texture = ExtResource("1_ffoxy")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2880, 602)
+texture = ExtResource("1_ffoxy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1920, 602)
+shape = SubResource("RectangleShape2D_hrh5n")

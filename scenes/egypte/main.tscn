@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbn0ydctkai6w"]
+
+[ext_resource type="Script" path="res://scenes/egypte/main.gd" id="1_p7qlg"]
+[ext_resource type="PackedScene" uid="uid://d3c45fcat1u33" path="res://scenes/egypte/bg.tscn" id="2_5j5od"]
+[ext_resource type="PackedScene" uid="uid://ccodu0dfc33po" path="res://scenes/egypte/ground.tscn" id="3_qwtvc"]
+[ext_resource type="PackedScene" uid="uid://cry5ugkwnxt5t" path="res://scenes/egypte/dino.tscn" id="4_n238n"]
+[ext_resource type="PackedScene" uid="uid://btu6rhe4doccj" path="res://scenes/base_map/scenes/hud.tscn" id="5_yjr1v"]
+[ext_resource type="PackedScene" uid="uid://4akstrb1jpcd" path="res://scenes/egypte/game_over.tscn" id="6_5gpc5"]
+[ext_resource type="PackedScene" uid="uid://pkji3t6ocf1b" path="res://scenes/egypte/win.tscn" id="7_tdihv"]
+[ext_resource type="AudioStream" uid="uid://dqjus3f02f5rt" path="res://assets/egypte/sound/Musique_Egypte.wav" id="8_b87s1"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_p7qlg")
+
+[node name="bg" parent="." instance=ExtResource("2_5j5od")]
+
+[node name="Ground" parent="." instance=ExtResource("3_qwtvc")]
+position = Vector2(0, 428)
+
+[node name="Dino" parent="." instance=ExtResource("4_n238n")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+
+[node name="HUD" parent="." instance=ExtResource("5_yjr1v")]
+
+[node name="GameOver" parent="." instance=ExtResource("6_5gpc5")]
+
+[node name="Win" parent="." instance=ExtResource("7_tdihv")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_b87s1")
+volume_db = -15.0
+autoplay = true

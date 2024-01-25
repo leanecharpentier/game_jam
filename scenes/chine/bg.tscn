@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw8b134m7mf7c"]
+
+[ext_resource type="Texture2D" uid="uid://naec7rbpwx6n" path="res://assets/chine/img/background/fond_pekin.png" id="1_qyrdh"]
+
+[node name="bg" type="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qyrdh")
+centered = false
