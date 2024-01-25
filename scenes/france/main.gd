@@ -165,7 +165,7 @@ func game_over():
 	#$GameOver.show()
 	
 func win():
-	if score / SCORE_MODIFIER >= 2500:
+	if score / SCORE_MODIFIER >= 100:
 		check_high_score()
 		get_tree().paused = true
 		game_running = false
@@ -173,5 +173,6 @@ func win():
 		$Win.show()
 		$Win.get_node("WinSound").play()
 		await get_tree().create_timer(2.0).timeout # waits for 1 second
+		get_tree().paused = false
 		get_tree().change_scene_to_file("res://scenes/home.tscn")
 

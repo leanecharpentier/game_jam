@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cansqgp57ugir"]
+
+[ext_resource type="Script" path="res://scenes/level_1.gd" id="1_gloiw"]
+
+[node name="level1" type="Node"]
+script = ExtResource("1_gloiw")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 117.0
+offset_bottom = 55.0
+text = "level 1"

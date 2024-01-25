@@ -21,20 +21,13 @@ bg_color = Color(1, 1, 1, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vykx"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="home" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="home" type="Node"]
 script = ExtResource("1_70trm")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_gtht1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -49,7 +42,6 @@ texture = ExtResource("2_12ijm")
 centered = false
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 2
 offset_left = 100.0
 offset_top = 143.0
 offset_right = 701.0
@@ -58,7 +50,6 @@ text = "Choisis un niveau sur la carte : "
 label_settings = SubResource("LabelSettings_tbtri")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
 anchor_top = 0.3
@@ -184,7 +175,6 @@ theme = ExtResource("6_r1dgb")
 text = "Quitter"
 
 [node name="france" type="Button" parent="."]
-layout_mode = 0
 offset_left = 1124.0
 offset_top = 479.0
 offset_right = 1209.0
@@ -193,7 +183,6 @@ theme = ExtResource("5_4e8p0")
 text = "    1    "
 
 [node name="usa" type="Button" parent="."]
-layout_mode = 0
 offset_left = 770.0
 offset_top = 472.0
 offset_right = 857.0
@@ -203,7 +192,6 @@ text = "2
 "
 
 [node name="russie" type="Button" parent="."]
-layout_mode = 0
 offset_left = 1475.0
 offset_top = 421.0
 offset_right = 1562.0
@@ -213,7 +201,6 @@ text = "3
 "
 
 [node name="chine" type="Button" parent="."]
-layout_mode = 0
 offset_left = 1516.0
 offset_top = 549.0
 offset_right = 1603.0
@@ -222,7 +209,6 @@ theme = ExtResource("5_4e8p0")
 text = "4"
 
 [node name="egypte" type="Button" parent="."]
-layout_mode = 0
 offset_left = 1176.0
 offset_top = 565.0
 offset_right = 1263.0
@@ -231,7 +217,6 @@ theme = ExtResource("5_4e8p0")
 text = "5"
 
 [node name="lockFrance" type="ColorRect" parent="."]
-layout_mode = 0
 offset_left = 376.0
 offset_top = 262.0
 offset_right = 436.0
@@ -239,7 +224,6 @@ offset_bottom = 317.0
 color = Color(0.486275, 0.768627, 0.682353, 1)
 
 [node name="lockUsa" type="ColorRect" parent="."]
-layout_mode = 0
 offset_left = 377.0
 offset_top = 352.0
 offset_right = 437.0
@@ -247,7 +231,6 @@ offset_bottom = 408.0
 color = Color(0.486275, 0.768627, 0.682353, 1)
 
 [node name="lockRussie" type="ColorRect" parent="."]
-layout_mode = 0
 offset_left = 374.0
 offset_top = 442.0
 offset_right = 434.0
@@ -255,7 +238,6 @@ offset_bottom = 497.0
 color = Color(0.486275, 0.768627, 0.682353, 1)
 
 [node name="lockChine" type="ColorRect" parent="."]
-layout_mode = 0
 offset_left = 372.0
 offset_top = 534.0
 offset_right = 432.0
@@ -263,7 +245,6 @@ offset_bottom = 589.0
 color = Color(0.486275, 0.768627, 0.682353, 1)
 
 [node name="lockEgypte" type="ColorRect" parent="."]
-layout_mode = 0
 offset_left = 373.0
 offset_top = 625.0
 offset_right = 433.0
@@ -271,10 +252,10 @@ offset_bottom = 680.0
 color = Color(0.486275, 0.768627, 0.682353, 1)
 
 [node name="regles" parent="." instance=ExtResource("8_yvsoc")]
-layout_mode = 1
+visible = false
 
 [node name="quitRegle" type="Button" parent="."]
-layout_mode = 1
+visible = false
 anchors_preset = -1
 anchor_left = 0.05
 anchor_top = 0.05
