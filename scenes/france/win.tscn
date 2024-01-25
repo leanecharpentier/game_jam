@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://diy63fy68ge1m"]
+[gd_scene load_steps=4 format=3 uid="uid://deotkmtbkldlp"]
 
-[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://scenes/base_map/assets/fonts/retro.ttf" id="1_ac5fn"]
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/russie/fonts/retro.ttf" id="1_ac5fn"]
 [ext_resource type="AudioStream" uid="uid://eqk3d2urj6lg" path="res://scenes/base_map/assets/sound/victory.wav" id="2_6w4m6"]
 [ext_resource type="Texture2D" uid="uid://df2anr2kwxj04" path="res://assets/egypte/img/VICTORY.png" id="2_v7wob"]
 

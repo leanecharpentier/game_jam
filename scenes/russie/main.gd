@@ -169,8 +169,8 @@ func win():
 		check_high_score()
 		get_tree().paused = true
 		game_running = false
+		global.levelChine = true
 		$Win.show()
 		$Win.get_node("WinSound").play()
-		
-		
-		
+		await get_tree().create_timer(2.0).timeout # waits for 1 second
+		get_tree().change_scene_to_file("res://scenes/home.tscn")

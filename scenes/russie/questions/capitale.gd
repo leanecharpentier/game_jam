@@ -35,7 +35,7 @@ func _on_retour_pressed():
 	get_tree().change_scene_to_file("res://scenes/home.tscn")
 	
 func _on_loose_sound_finished():
-	get_tree().change_scene_to_file("res://scenes/russie/level_russie.tscn")
+	get_tree().change_scene_to_file("res://scenes/russie/main.tscn")
 
 func _on_win_sound_finished():
-	get_tree().change_scene_to_file("res://scenes/russie/level_russie.tscn")
+	get_tree().change_scene_to_file("res://scenes/russie/main.tscn")
